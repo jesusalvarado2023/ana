@@ -31,11 +31,11 @@ datos = {
 df = pd.DataFrame(datos)
 
 # Mostrar el calendario
-st.markdown("<p class='big-font'>📖 Horario de Clases:</p>", unsafe_allow_html=True)
+st.markdown("<p class='big-font'>📖 Horarios:</p>", unsafe_allow_html=True)
 st.dataframe(df, hide_index=True)
 
 # Imagen decorativa
-st.image("img100.png", width=500)
+st.image("img100.png", width=800)
 
 # Mensaje de motivación
 st.markdown(
