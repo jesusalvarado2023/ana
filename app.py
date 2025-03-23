@@ -23,9 +23,9 @@ st.markdown("<h1 style='text-align: center; color: #ff4500;'>📆 Calendario de 
 
 # Definir el calendario
 datos = {
-    "Día": ["Sábado", "Sábado", "Domingo", "Domingo"],
-    "Hora": ["3:00 PM - 5:00 PM", "3:00 PM - 5:00 PM", "10:00 AM - 12:00 PM", "10:00 AM - 12:00 PM"],
-    "Asignatura": ["Química", "Física", "Matemáticas", "Matemáticas"]
+    "Día": ["Sábado 22/03/25 OK", "Domingo 23/03/25 OK", "Sábado 22/03/25", "Domingo 30/03/25"],
+    "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Química y Física", "Geometría y Trigonometría"],
+    "Tema": ["Clasificación de la materia | Análisis dimensional y vectores", "Planteo de ecuaciones en Segmentos y Ángulos", "Pendiente", "Pendiente"]
 }
 
 df = pd.DataFrame(datos)
@@ -41,7 +41,7 @@ st.markdown(
 )
 
 # Imagen decorativa
-st.image("https://www.kindpng.com/picc/m/175-1752765_transparent-cartoon-school-png-kids-learning-clipart-png.png", width=300)
+st.image("img100.png", width=300)
 
 # Mostrar fecha y hora actual
 st.markdown(f"<p style='text-align: center;'>📅 Hoy es: {datetime.now().strftime('%A, %d de %B de %Y')}</p>", unsafe_allow_html=True)
