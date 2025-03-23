@@ -16,6 +16,19 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
+# Imagen decorativa
+#st.image("img100.png", width=300)
+# Imagen decorativa centrada
+st.markdown(
+    """
+    <div class='center-img'>
+        <img src='img100.png' width='300'>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # Estilos infantiles
 st.markdown(
     """
