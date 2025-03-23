@@ -6,9 +6,6 @@ from datetime import datetime
 # Configuración de la página
 st.set_page_config(page_title="Calendario de Clases de Ana", page_icon="📚", layout="centered")
 
-# Imagen decorativa
-st.image("img100.png", width=500)
-
 # Estilos infantiles
 st.markdown(
     """
@@ -36,6 +33,9 @@ df = pd.DataFrame(datos)
 # Mostrar el calendario
 st.markdown("<p class='big-font'>📖 Horario de Clases:</p>", unsafe_allow_html=True)
 st.dataframe(df, hide_index=True)
+
+# Imagen decorativa
+st.image("img100.png", width=500)
 
 # Mensaje de motivación
 st.markdown(
