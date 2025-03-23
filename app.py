@@ -6,28 +6,8 @@ from datetime import datetime
 # Configuración de la página
 st.set_page_config(page_title="Calendario de Clases de Ana", page_icon="📚", layout="centered")
 
-# Imagen decorativa centrada
-st.markdown(
-    """
-    <div class='center-img'>
-        <img src='img100.png' width='300'>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-
 # Imagen decorativa
-#st.image("img100.png", width=300)
-# Imagen decorativa centrada
-st.markdown(
-    """
-    <div class='center-img'>
-        <img src='img100.png' width='300'>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.image("img100.png", width=500)
 
 # Estilos infantiles
 st.markdown(
