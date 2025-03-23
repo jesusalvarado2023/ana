@@ -6,6 +6,16 @@ from datetime import datetime
 # Configuración de la página
 st.set_page_config(page_title="Calendario de Clases de Ana", page_icon="📚", layout="centered")
 
+# Imagen decorativa centrada
+st.markdown(
+    """
+    <div class='center-img'>
+        <img src='img100.png' width='300'>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # Estilos infantiles
 st.markdown(
     """
@@ -23,9 +33,9 @@ st.markdown("<h1 style='text-align: center; color: #ff4500;'>📆 Calendario de 
 
 # Definir el calendario
 datos = {
-    "Día": ["Sábado 22/03/25 OK", "Domingo 23/03/25 OK", "Sábado 22/03/25", "Domingo 30/03/25"],
+    "Día": ["Sábado 22/03/25 OK", "Domingo 23/03/25 OK", "Sábado 29/03/25", "Domingo 30/03/25"],
     "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Química y Física", "Geometría y Trigonometría"],
-    "Tema": ["Clasificación de la materia | Análisis dimensional y vectores", "Planteo de ecuaciones en Segmentos y Ángulos", "Pendiente", "Pendiente"]
+    "Tema": ["Clasificación de la materia | Análisis dimensional y vectores", "Planteo de ecuaciones en Segmentos y Ángulos | Sistema sexagesimal, centesimal y radián. Conversiones", "-", "-"]
 }
 
 df = pd.DataFrame(datos)
@@ -36,12 +46,9 @@ st.dataframe(df, hide_index=True)
 
 # Mensaje de motivación
 st.markdown(
-    "<p class='big-font' style='text-align: center;'>🌟 ¡Ana, sigue aprendiendo y divirtiéndote! 🌟</p>",
+    "<p class='big-font' style='text-align: center;'>🌟 ¡Ana, sigue aprendiendo y esforzándote! 🌟</p>",
     unsafe_allow_html=True
 )
-
-# Imagen decorativa
-st.image("img100.png", width=300)
 
 # Mostrar fecha y hora actual
 st.markdown(f"<p style='text-align: center;'>📅 Hoy es: {datetime.now().strftime('%A, %d de %B de %Y')}</p>", unsafe_allow_html=True)
