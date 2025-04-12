@@ -23,9 +23,12 @@ st.markdown("<h1 style='text-align: center; color: #ff4500;'>📆 Calendario de 
 
 # Definir el calendario
 datos = {
-    "Día": ["Sábado 22/03/25 (2h)", "Domingo 23/03/25 (2h)", "Sábado 29/03/25 (1h)", "Domingo 30/03/25 (0h)", "Sábado 05/04/25", "Domingo 06/04/25"],
-    "Asignatura": ["Química y Física", "Geometría y Trigonometría","Repaso","No tuvimos clase", "Química y Física", "Geometría y Trigonometría"],
-    "Tema": ["Clasificación de la materia | Análisis dimensional y vectores", "Planteo de ecuaciones en Segmentos y Ángulos | Sistema sexagesimal, centesimal y radián. Conversiones", "Ejercicios", "No aplica","-","-"]
+    "Día": ["Sábado 22/03/25 (2h)", "Domingo 23/03/25 (2h)", "Sábado 29/03/25 (1h)", "Domingo 30/03/25 (0h)", "Sábado 05/04/25 (0h)", "Domingo 06/04/25 (2h)",
+           "Sábado 12/04/25 (0h)", "Domingo 13/04/25 (2h)"],
+    "Asignatura": ["Química y Física", "Geometría y Trigonometría","Repaso","No tuvimos clase", "Química y Física", "Geometría y Trigonometría",
+                  "-", "-"],
+    "Tema": ["Clasificación de la materia | Análisis dimensional y vectores", "Planteo de ecuaciones en Segmentos y Ángulos | Sistema sexagesimal, centesimal y radián. Conversiones", "Ejercicios", "No aplica","-","Resolución de exámenes y tareas-",
+            "Postergado", "-"]
 }
 
 df = pd.DataFrame(datos)
