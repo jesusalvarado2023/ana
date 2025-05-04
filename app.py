@@ -22,38 +22,53 @@ st.markdown("<h1 style='text-align: center; color: #ff4500;'>📆 Calendario de 
 
 # Función para la página de Calendario de Clases
 def mostrar_calendario():
-    # Datos del calendario
-    datos = {
-        "Día": ["Sábado 22/03/25 (2h)", "Domingo 23/03/25 (2h)", "Sábado 29/03/25 (1h)", "Domingo 30/03/25 (0h)", "Sábado 05/04/25 (0h)", "Domingo 06/04/25 (2h)",
-               "Sábado 12/04/25 (0h)", "Domingo 13/04/25 (2h)"],
-        "Asignatura": ["Química y Física", "Geometría y Trigonometría","Repaso","No tuvimos clase", "Química y Física", "Geometría y Trigonometría",
-                      "-", "-"],
-        "Tema": ["Clasificación de la materia | Análisis dimensional y vectores", "Planteo de ecuaciones en Segmentos y Ángulos | Sistema sexagesimal, centesimal y radián. Conversiones", "Ejercicios", "No aplica","-","Resolución de exámenes y tareas-",
-                "Postergado", "-"]
+    # Tabla 1
+    datos1 = {
+        "Día": ["Sábado 22/03/25 (2h)", "Domingo 23/03/25 (2h)", "Sábado 29/03/25 (1h)", "Domingo 30/03/25 (0h)",
+                "Sábado 05/04/25 (0h)", "Domingo 06/04/25 (2h)", "Sábado 12/04/25 (0h)", "Domingo 13/04/25 (2h)"],
+        "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "No tuvimos clase",
+                       "Química y Física", "Geometría y Trigonometría", "-", "-"],
+        "Tema": ["Clasificación de la materia | Análisis dimensional y vectores",
+                 "Planteo de ecuaciones en Segmentos y Ángulos | Sistema sexagesimal, centesimal y radián. Conversiones",
+                 "Ejercicios", "No aplica", "-", "Resolución de exámenes y tareas-", "Postergado", "-"]
     }
 
-    df = pd.DataFrame(datos)
+    df1 = pd.DataFrame(datos1)
 
-    # Mostrar el calendario
-    st.markdown("<p class='big-font'>📖 Horarios:</p>", unsafe_allow_html=True)
-    st.dataframe(df, hide_index=True)
+    st.markdown("<p class='big-font'>📖 Horarios (Parte 1):</p>", unsafe_allow_html=True)
+    st.dataframe(df1, hide_index=True)
 
-    st.write("Total: 9 horas hasta el 13 de abril del 2025.")
+    # Tabla 2: Nueva tabla con el mismo formato
+    datos2 = {
+        "Día": ["Sábado 19/04/25 (1h)", "Domingo 20/04/25 (2h)", "Sábado 26/04/25 (2h)", "Domingo 27/04/25 (1h)"],
+        "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "Química y Física"],
+        "Tema": ["Leyes ponderales | Cambios físicos y químicos", 
+                 "Resolución de problemas con ángulos y triángulos", 
+                 "Simulacro de examen", 
+                 "Revisión de tareas anteriores"]
+    }
+
+    df2 = pd.DataFrame(datos2)
+
+    st.markdown("<p class='big-font'>📖 Horarios (Parte 2):</p>", unsafe_allow_html=True)
+    st.dataframe(df2, hide_index=True)
+
+    st.write("Total: 15 horas hasta el 27 de abril del 2025.")  # Actualiza el total de horas
+
     # Imagen decorativa
     st.image("img100.png", width=800)
 
-    # Mensaje de motivación
+    # Mensaje motivacional
     st.markdown(
         "<p class='big-font' style='text-align: center;'>🌟 ¡Ana, sigue aprendiendo y esforzándote! 🌟</p>",
         unsafe_allow_html=True
     )
 
-    # Mostrar fecha y hora actual
+    # Mostrar fecha actual
     st.markdown(f"<p style='text-align: center;'>📅 Hoy es: {datetime.now().strftime('%A, %d de %B de %Y')}</p>", unsafe_allow_html=True)
 
 # Función para la página de Clases y Tareas
 def mostrar_clases_tareas():
-    # Datos de clases y tareas
     tareas = {
         "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "Química y Física", "Geometría y Trigonometría", "Exámenes y Tareas"],
         "Tarea": ["Estudiar clasificación de la materia y vectores", "Resolver ecuaciones y conversiones de ángulos", "Ejercicios prácticos", "Revisar conceptos de Química y Física", "Preparar exámenes y resolver tareas", "Entrega de exámenes y tareas."]
@@ -61,25 +76,19 @@ def mostrar_clases_tareas():
 
     df_tareas = pd.DataFrame(tareas)
 
-    # Mostrar las tareas
     st.markdown("<p class='big-font'>📚 Clases y Tareas Pendientes:</p>", unsafe_allow_html=True)
     st.dataframe(df_tareas, hide_index=True)
 
-    # Mensaje de motivación
     st.markdown(
         "<p class='big-font' style='text-align: center;'>🌟 ¡A trabajar en esas tareas, Ana! 🌟</p>",
         unsafe_allow_html=True
     )
 
-# Crear un selector para cambiar entre las páginas
-pagina = st.radio(
-    "Selecciona una página:",
-    ("Calendario de Clases", "Clases y Tareas")
-)
+# Selector de página
+pagina = st.radio("Selecciona una página:", ("Calendario de Clases", "Clases y Tareas"))
 
-# Mostrar la página seleccionada
+# Mostrar según selección
 if pagina == "Calendario de Clases":
     mostrar_calendario()
 else:
     mostrar_clases_tareas()
-
