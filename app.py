@@ -85,7 +85,7 @@ def mostrar_clases_tareas():
     )
 
 # Selector de página
-pagina = st.radio("Selecciona una página:", ("Calendario de Clases", "Clases y Tareas"))
+pagina = st.radio("Selecciona una página:", ("Calendario de Clases", "Pendientes"))
 
 # Mostrar según selección
 if pagina == "Calendario de Clases":
