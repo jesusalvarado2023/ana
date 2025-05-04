@@ -24,12 +24,12 @@ st.markdown("<h1 style='text-align: center; color: #ff4500;'>📆 Calendario de 
 def mostrar_calendario():
     # Tabla 2: Nueva tabla con el mismo formato
     datos2 = {
-        "Día": ["Sábado 19/04/25 (1h)", "Domingo 20/04/25 (2h)", "Sábado 26/04/25 (2h)", "Domingo 27/04/25 (1h)"],
+        "Día": ["Sábado 20/04/25 (2h)", "Domingo 27/04/25 (2h)", "Domingo 04/05/25 (2h)", "Domingo 11/05/25 (1h)"],
         "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "Química y Física"],
-        "Tema": ["Leyes ponderales | Cambios físicos y químicos", 
-                 "Resolución de problemas con ángulos y triángulos", 
-                 "Simulacro de examen", 
-                 "Revisión de tareas anteriores"]
+        "Tema": ["OK", 
+                 "OK", 
+                 "Pendiente", 
+                 "-"]
     }
 
     df2 = pd.DataFrame(datos2)
