@@ -68,7 +68,7 @@ def mostrar_calendario():
     st.markdown(f"<p style='text-align: center;'>📅 Hoy es: {datetime.now().strftime('%A, %d de %B de %Y')}</p>", unsafe_allow_html=True)
 
 # Función para la página de Clases y Tareas
-def mostrar_clases_tareas():
+def mostrar_pendientes():
     tareas = {
         "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "Química y Física", "Geometría y Trigonometría", "Exámenes y Tareas"],
         "Tarea": ["Estudiar clasificación de la materia y vectores", "Resolver ecuaciones y conversiones de ángulos", "Ejercicios prácticos", "Revisar conceptos de Química y Física", "Preparar exámenes y resolver tareas", "Entrega de exámenes y tareas."]
@@ -80,7 +80,7 @@ def mostrar_clases_tareas():
     st.dataframe(df_tareas, hide_index=True)
 
     st.markdown(
-        "<p class='big-font' style='text-align: center;'>🌟 ¡A trabajar en esas tareas, Ana! 🌟</p>",
+        "<p class='big-font' style='text-align: center;'>🌟 ¡No hay pendientes! 🌟</p>",
         unsafe_allow_html=True
     )
 
@@ -91,4 +91,4 @@ pagina = st.radio("Selecciona una página:", ("Calendario de Clases", "Pendiente
 if pagina == "Calendario de Clases":
     mostrar_calendario()
 else:
-    mostrar_clases_tareas()
+    mostrar_pendientes()
