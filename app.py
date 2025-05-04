@@ -34,7 +34,7 @@ def mostrar_calendario():
 
     df2 = pd.DataFrame(datos2)
 
-    st.markdown("<p class='big-font'>📖 Horarios (Parte 2):</p>", unsafe_allow_html=True)
+    st.markdown("<p class='big-font'>📖 Horarios (Actual):</p>", unsafe_allow_html=True)
     st.dataframe(df2, hide_index=True)
     
     # Tabla 1
