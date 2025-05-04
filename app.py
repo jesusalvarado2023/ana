@@ -71,7 +71,7 @@ def mostrar_calendario():
 def mostrar_pendientes():
     tareas = {
         "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "Química y Física", "Geometría y Trigonometría", "Exámenes y Tareas"],
-        "Tarea": ["Estudiar clasificación de la materia y vectores", "Resolver ecuaciones y conversiones de ángulos", "Ejercicios prácticos", "Revisar conceptos de Química y Física", "Preparar exámenes y resolver tareas", "Entrega de exámenes y tareas."]
+        "Tarea": ["A", "B", "C", "D", "E", "F"]
     }
 
     df_tareas = pd.DataFrame(tareas)
