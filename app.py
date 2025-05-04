@@ -22,6 +22,21 @@ st.markdown("<h1 style='text-align: center; color: #ff4500;'>📆 Calendario de 
 
 # Función para la página de Calendario de Clases
 def mostrar_calendario():
+    # Tabla 2: Nueva tabla con el mismo formato
+    datos2 = {
+        "Día": ["Sábado 19/04/25 (1h)", "Domingo 20/04/25 (2h)", "Sábado 26/04/25 (2h)", "Domingo 27/04/25 (1h)"],
+        "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "Química y Física"],
+        "Tema": ["Leyes ponderales | Cambios físicos y químicos", 
+                 "Resolución de problemas con ángulos y triángulos", 
+                 "Simulacro de examen", 
+                 "Revisión de tareas anteriores"]
+    }
+
+    df2 = pd.DataFrame(datos2)
+
+    st.markdown("<p class='big-font'>📖 Horarios (Parte 2):</p>", unsafe_allow_html=True)
+    st.dataframe(df2, hide_index=True)
+    
     # Tabla 1
     datos1 = {
         "Día": ["Sábado 22/03/25 (2h)", "Domingo 23/03/25 (2h)", "Sábado 29/03/25 (1h)", "Domingo 30/03/25 (0h)",
@@ -37,21 +52,6 @@ def mostrar_calendario():
 
     st.markdown("<p class='big-font'>📖 Horarios (Parte 1):</p>", unsafe_allow_html=True)
     st.dataframe(df1, hide_index=True)
-
-    # Tabla 2: Nueva tabla con el mismo formato
-    datos2 = {
-        "Día": ["Sábado 19/04/25 (1h)", "Domingo 20/04/25 (2h)", "Sábado 26/04/25 (2h)", "Domingo 27/04/25 (1h)"],
-        "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "Química y Física"],
-        "Tema": ["Leyes ponderales | Cambios físicos y químicos", 
-                 "Resolución de problemas con ángulos y triángulos", 
-                 "Simulacro de examen", 
-                 "Revisión de tareas anteriores"]
-    }
-
-    df2 = pd.DataFrame(datos2)
-
-    st.markdown("<p class='big-font'>📖 Horarios (Parte 2):</p>", unsafe_allow_html=True)
-    st.dataframe(df2, hide_index=True)
 
     st.write("Total: 15 horas hasta el 27 de abril del 2025.")  # Actualiza el total de horas
 
