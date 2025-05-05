@@ -24,18 +24,20 @@ st.markdown("<h1 style='text-align: center; color: #ff4500;'>📆 Calendario de 
 def mostrar_calendario():
     # Tabla 2: Nueva tabla con el mismo formato
     datos2 = {
-        "Día": ["Sábado 20/04/25 (2h)", "Domingo 27/04/25 (2h)", "Domingo 04/05/25 (2h)", "Domingo 11/05/25 (1h)"],
-        "Asignatura": ["Química y Física", "Geometría y Trigonometría", "Repaso", "Química y Física"],
+        "Día": ["Sábado 20/04/25 (2h)", "Domingo 21/04/25 (2h)", "Domingo 27/04/25 (2h)", "Domingo 04/05/25 (2h)"],
+        "Asignatura": ["Química y Física", "Aritmética y Algebra", "Geometría y Trigonometría", "Trigonometría y Física"],
         "Tema": ["OK", 
                  "OK", 
-                 "Pendiente", 
-                 "-"]
+                 "OK", 
+                 "OK"]
     }
 
     df2 = pd.DataFrame(datos2)
 
-    st.markdown("<p class='big-font'>📖 Horarios (Actual):</p>", unsafe_allow_html=True)
+    st.markdown("<p class='big-font'>📖 Actual:</p>", unsafe_allow_html=True)
     st.dataframe(df2, hide_index=True)
+
+    st.write("Total: 15 horas hasta el 27 de abril del 2025.")  # Actualiza el total de horas
     
     # Tabla 1
     datos1 = {
@@ -48,15 +50,13 @@ def mostrar_calendario():
                  "Ejercicios", "No aplica", "-", "Resolución de exámenes y tareas-", "Postergado", "-"]
     }
 
+    # Imagen decorativa
+    st.image("img100.png", width=800)
+    
     df1 = pd.DataFrame(datos1)
 
     st.markdown("<p class='big-font'>📖 Horario (Mes 1):</p>", unsafe_allow_html=True)
     st.dataframe(df1, hide_index=True)
-
-    st.write("Total: 15 horas hasta el 27 de abril del 2025.")  # Actualiza el total de horas
-
-    # Imagen decorativa
-    st.image("img100.png", width=800)
 
     # Mensaje motivacional
     st.markdown(
