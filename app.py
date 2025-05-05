@@ -50,8 +50,8 @@ def mostrar_calendario():
 
     df1 = pd.DataFrame(datos1)
 
-    #st.markdown("<p class='big-font'>📖 Horario (Mes 1):</p>", unsafe_allow_html=True)
-    #st.dataframe(df1, hide_index=True)
+    st.markdown("<p class='big-font'>📖 Horario (Mes 1):</p>", unsafe_allow_html=True)
+    st.dataframe(df1, hide_index=True)
 
     #st.write("Total: 15 horas hasta el 27 de abril del 2025.")  # Actualiza el total de horas
 
