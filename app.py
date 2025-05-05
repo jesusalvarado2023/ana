@@ -37,7 +37,7 @@ def mostrar_calendario():
     st.markdown("<p class='big-font'>📖 Actual:</p>", unsafe_allow_html=True)
     st.dataframe(df2, hide_index=True)
 
-    st.write("Total: 15 horas hasta el 27 de abril del 2025.")  # Actualiza el total de horas
+    st.write("Total: 8 horas hasta el 4 de mayo del 2025.")  # Actualiza el total de horas
     
     # Tabla 1
     datos1 = {
